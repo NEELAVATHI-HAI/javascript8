@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands-on</title>
+</head>
+<body>
+    <script>
+        let sr = [ {name: 'John', id: 123, marks : 98 },
+          {name: 'Baba', id: 101, marks : 23 },
+          {name: 'yaga', id: 200, marks : 45 },
+          {name: 'Wick', id: 115, marks : 75 } ] ;
+        //   Question 1 : We are interested in retrieving only the name of the students and all the names should be in caps.
+        for(var i=0;i<sr.length;i++)
+        {
+            let x=sr[i].name;
+            console.log(x.toUpperCase());
+        }
+
+        //Question 2: Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks.
+        for(var i=0;i<sr.length;i++)
+        {
+            if(sr[i].marks>50)
+            
+            console.log(sr[i]);
+        }
+        //Question 3: Retrieve the details of students who scored more than 50 marks and have id greater than 120.
+        for(var i=0;i<sr.length;i++)
+        {
+            if(sr[i].marks>50 && sr[i].id>120)
+            {
+            console.log(sr[i]);}
+        }
+        //Question 4: Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.
+        var sum=0;
+        for(var i=0;i<sr.length;i++)
+        {
+            sum=sum+sr[i].marks;
+        }
+        console.log(sum);
+        //Question 5: This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.
+        for(var i=0;i<sr.length;i++)
+        {
+            if(sr[i].marks>50)
+            {
+            console.log(sr[i].name);}
+        }
+        //Question 6: This time we are required to print the sum of marks of the students with id > 120.
+        var sum1=0;
+        for(var i=0;i<sr.length;i++)
+        {
+            if(sr[i].id>120)
+            {
+            sum1=sum1+sr[i].marks;}
+        }
+        console.log(sum1);
+        //Question 7: This time we are required to print the total marks of the students with marks greater than 50 after a grace of 15 marks has been added to those students who scored less than 50.
+        var sum2=0;
+        for(var i=0;i<sr.length;i++)
+        {
+            if(sr[i].marks<50)
+            {
+                sr[i].marks=sr[i].marks+15;}
+        }
+        for(var i=0;i<sr.length;i++)
+        {
+            if(sr[i].marks>50)
+            {
+            sum2=sum2+sr[i].marks;}
+        }
+        console.log(sum2);
+        //Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. 
+        let sr1 = [ {name: 'John', class: 123, roll_no :"A1" },
+          {name: 'Baba', class: 9, roll_no :"A2" },
+          {name: 'yaga', class: 8, roll_no :"A3" },
+          {name: 'Wick', class: 9, roll_no :"A4" },
+          {name: 'Nick', class:7, roll_no :"A5"} ,
+          {name: 'Jack', class:8 , roll_no :"A6"}] ;
+          console.log(sr1);
+
+
+    </script>
+</body>
+</html>
+
+
